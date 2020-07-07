@@ -1,6 +1,7 @@
 const express = require("express");
 const Joi = require("joi");
 const { MongoClient, ObjectId } = require("mongodb");
+require("dotenv").config();
 
 // .env shit here
 DB_CONNECTION =
@@ -10,7 +11,7 @@ DB_NAME = "db-contacts";
 
 let db, contacts;
 
-const PORT = process.env.PORT || 5005;
+const PORT = process.env.PORT;
 
 const main = async () => {
   const app = express();
