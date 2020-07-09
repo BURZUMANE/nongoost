@@ -41,6 +41,7 @@ module.exports = class ContactServer {
   }
 
   startListening() {
+    console.log(PORT)
     this.server.listen(PORT, () => {
       console.log(`Ala Pugacheva app listening at http://localhost:${PORT}`);
     });
